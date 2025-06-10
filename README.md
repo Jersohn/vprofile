@@ -23,4 +23,9 @@ sql dump file:
 - db_backup.sql file is a mysql dump file.we have to import this dump to mysql db server
 - > mysql -u <user_name> -p accounts < db_backup.sql
 
-
+#plugin for jenkins pipeline
+-sonarqube scanner
+-nexus
+-pipeline maven integration plugin
+-BuildTimestamp
+-pipeline utility step

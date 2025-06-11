@@ -29,5 +29,5 @@ sql dump file:
 -ECR ( docker registry from jenkins)
 -docker (from jenkins)
 -docker pipeline(from jenkins)
--store aws access key(credential)
+-store aws access key(credentials)
 

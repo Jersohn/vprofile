@@ -24,8 +24,8 @@ sql dump file:
 
 # pluging for jenkins and aws
 -install Docker engine in jenkins
--IAM USER with access key ( from aws)
--aws sdk (jenkins plugin)and cli
+-Create IAM USER with access key ( from aws)
+-install aws sdk (jenkins plugin)and cli
 -ECR ( docker registry from jenkins)
 -docker (from jenkins)
 -docker pipeline(from jenkins)

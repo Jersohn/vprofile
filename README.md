@@ -22,4 +22,12 @@ sql dump file:
 - db_backup.sql file is a mysql dump file.we have to import this dump to mysql db server
 - > mysql -u <user_name> -p accounts < db_backup.sql
 
+# pluging for jenkins and aws
+-install Docker engine in jenkins
+-IAM USER with access key ( from aws)
+-aws sdk (jenkins plugin)and cli
+-ECR ( docker registry from jenkins)
+-docker (from jenkins)
+-docker pipeline(from jenkins)
+-store aws access key(credential)
 

@@ -1,11 +1,11 @@
 FROM maven:3.9.9-eclipse-temurin-21-jammy as BUILD_IMAGE
 RUN git clone https://github.com/Jersohn/vprofile.git
-RUN cd vprofile-project && git checkout containers && mvn install
+RUN cd vprofile && git checkout containers && mvn install
 
 
 
 FROM tomcat:10-jdk21
-LABEL "Projetc"="Vprofile"
+LABEL "Project"="Vprofile"
 LABEL "Author"="Jersohn"
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY --from=BUILD_IMAGE vprofile/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war

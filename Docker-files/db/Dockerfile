@@ -1,5 +1,5 @@
 FROM mysql:8.0.33
-LABEL "Projetc"="Vprofile"
+LABEL "Project"="Vprofile"
 LABEL "Author"="Jersohn"
 
 ENV MYSQL_ROOT_PASSWORD="vprodbpass"

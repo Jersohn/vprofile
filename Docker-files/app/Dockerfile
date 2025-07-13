@@ -1,4 +1,4 @@
-FROM maven:3.9.9-eclipse-temurin-21-jammy as BUILD_IMAGE
+FROM maven:3.9.9-eclipse-temurin-21-jammy AS build_image
 RUN git clone https://github.com/Jersohn/vprofile.git
 RUN cd vprofile && git checkout containers && mvn install
 
@@ -8,7 +8,7 @@ FROM tomcat:10-jdk21
 LABEL "Project"="Vprofile"
 LABEL "Author"="Jersohn"
 RUN rm -rf /usr/local/tomcat/webapps/*
-COPY --from=BUILD_IMAGE vprofile/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=build_image vprofile/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 CMD ["catalina.sh","run"]
